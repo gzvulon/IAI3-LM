@@ -104,5 +104,5 @@ class BagOfWords(FeatureExtractor):
         '''
         pattern = re.compile(r'[a-z]{3,}')
         terms = re.findall(pattern, text.lower())
-        return s_text_filter.suffix_stem(terms)
+        return s_text_filter.suffixStem(terms)
     
