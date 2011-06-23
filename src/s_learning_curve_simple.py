@@ -26,15 +26,7 @@ def MakeAgentLimitedClass(n):
 
 def main():
     
-    params = {
-        scp.X_POINTS : 20,
-        scp.STEP :     5,
-        scp.NUM_FOLDS : 0,
-        scp.CLASSIFY_TIME : 2,
-        scp.LEARN_TIME : 60*2,
-        scp.SEED : 1
-    }
-    
+    params = scp.default_params
     agentClassGenerator = MakeAgentLimitedClass
     s_learning_curve.main(agentClassGenerator, params)
 
