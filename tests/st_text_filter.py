@@ -40,6 +40,22 @@ class Test(unittest.TestCase):
         terms = ['inging']
         self.assertEqual(s_text_filter.suffixStem(terms), ['ing'])
         
+    def test_word_list_filter1(self):
+        print '== test_word_list_filter1 =='
+        terms = ["dsfkj", 'sdw', 'a', "dff", 'on']
+        res = s_text_filter.word_list_filter(terms)
+        print res
+        assert res== ["dsfkj", 'sdw',  "dff"]
+    
+        black_list = ["a", "an", "and", "are", "as", "at", "be", "but", "by", 
+                  "for", "if", "in", "into", "is", "it", "no", "not", "of", 
+                  "on", "or", "such", "that", "the", "their", "then", "there", 
+                  "these", "they", "this", "to", "was", "will", "with"]
+        res = s_text_filter.word_list_filter(black_list)
+        print "empty:" , res
+        assert res == []
+    
+        
             
 
 

@@ -21,3 +21,16 @@ def suffix_stem(terms):
                 break
     
     return fixed_terms
+
+
+def word_list_filter(terms):
+    '''
+    @param terms: list of words
+    
+    '''
+    black_list = ["a", "an", "and", "are", "as", "at", "be", "but", "by", 
+                  "for", "if", "in", "into", "is", "it", "no", "not", "of", 
+                  "on", "or", "such", "that", "the", "their", "then", "there", 
+                  "these", "they", "this", "to", "was", "will", "with"]
+    res = filter(lambda term: not term in black_list, terms)
+    return res
