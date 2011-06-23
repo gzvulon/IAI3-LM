@@ -13,6 +13,7 @@ def suffix_stem(terms):
                 (r'[a-z]*s$', 1, ''),(r'[a-z]+eed$', 3, 'ee'),(r'[a-z]*ed$', 2, ''),
                 (r'[a-z]*ing$', 3, ''), (r'[a-z]*at$', 2, 'ate'),(r'[a-z]*bl$', 2, 'ble'),
                 (r'[a-z]*iz$', 2, 'ize')]
+    suffixes = [ (re.compile(rx),n,s) for rx,n,s in suffixes ] 
     
     for term in terms:
         for reg, cut, new_suffix in suffixes:

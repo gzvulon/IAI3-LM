@@ -21,24 +21,24 @@ class Test(unittest.TestCase):
 
     def test_suffix_stem_simple_examples(self):
         terms = ['sses', 'ies', 'ss', 's', 'meed', 'ed', 'ing', 'at', 'bl', 'iz']
-        fixed_terms = s_text_filter.suffixStem(terms)
+        fixed_terms = s_text_filter.suffix_stem(terms)
         self.assertEqual(fixed_terms, ['ss', 'i', 'ss', '', 'mee', '', '', 'ate', 'ble', 'ize'])
 
     def test_suffix_stem_complex_example1(self):
         terms = ['ssesessses']
-        self.assertEqual(s_text_filter.suffixStem(terms), ['ssesesss'])
+        self.assertEqual(s_text_filter.suffix_stem(terms), ['ssesesss'])
     
     def test_suffix_stem_complex_example2(self):
         terms = ['ssesessss']
-        self.assertEqual(s_text_filter.suffixStem(terms), ['ssesessss'])
+        self.assertEqual(s_text_filter.suffix_stem(terms), ['ssesessss'])
 
     def test_suffix_stem_complex_example3(self):
         terms = ['eeesseseed']
-        self.assertEqual(s_text_filter.suffixStem(terms), ['eeessesee'])
+        self.assertEqual(s_text_filter.suffix_stem(terms), ['eeessesee'])
         
     def test_suffix_stem_complex_example4(self):
         terms = ['inging']
-        self.assertEqual(s_text_filter.suffixStem(terms), ['ing'])
+        self.assertEqual(s_text_filter.suffix_stem(terms), ['ing'])
         
             
 
