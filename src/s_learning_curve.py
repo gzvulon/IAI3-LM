@@ -5,10 +5,10 @@ Created on Jun 23, 2011
 @author: inesmeya
 """
 from dataset_builder import DatasetBuilder
-from nearest_neighbor import NearestNeighbor
-from bag_of_words import BagOfWords
-from learning_agent import LearningAgent
-from s_agent_comparor import AgentComparator
+import scp
+import s_common
+import gc
+from s_learning_analyzer import AgentAnalyzer
 
 def createRealDatasets(dir = 'topics/'):
     '''
@@ -24,47 +24,59 @@ def createRealDatasets(dir = 'topics/'):
     return datasets
 
 
-
-def MakeAgentLimitedClass(n):
-    class AgentLimited(LearningAgent):
-        def createFeatureExtractor(self):
-            return BagOfWords(n)
-        
-        def createClassifier(self):
-            return NearestNeighbor()
-        
-        def __str__(self):
-            return 'AgentLimited_' + str(n)
-    return AgentLimited
-
-
-
 def print_results(results,dataname):
-    print "============= Learning Curve ==================="
+    print "\n============= Learning Curve ==================="
     print " -- ", dataname, "--"
-    for num_features,confusion in results:
-        print num_features, '%.2f%' % (confusion.getAccuracy()*100)
+    print "num_features,", "idf", "accuracy%,"
+    for num_features,confusion, idf in results:
+        print num_features,",",idf, ',%.2f' % (confusion.getAccuracy()*100)
+    print
 
-def main_measure(data, dataname):
-    N = 20
-    STEP = 5
-    num_features_arr =  [ i*STEP for i in range(1,N +1) ]
+def main_measure(data, dataname,agentClassGenerator,params):
+    
+    X_POINTS        = params[scp.X_POINTS]
+    STEP            = params[scp.STEP]
+    NUM_FOLDS       = params[scp.NUM_FOLDS]
+    CLASSIFY_TIME   = params[scp.CLASSIFY_TIME]
+    LEARN_TIME      = params[scp.LEARN_TIME]
+    SEED            = params[scp.SEED]
+    
+    num_features_arr =  [ i*STEP for i in range(1,X_POINTS +1) ]
     print "Evaluating", dataname
     results=[]
     for num_features in num_features_arr:
-        agentClass = MakeAgentLimitedClass(num_features)
-        confusion = AgentComparator().run_one(data, agentClass, 10, 300, num_folds=10, seed=1)
-        results.append( (num_features,confusion) )
-        print "num_features:",num_features," => ", 'Accuracy: %.2f%%' % (confusion.getAccuracy()*100)
+        agentClass = agentClassGenerator(num_features)
+        
+        try:
+            gc.disable()
+            confusion = AgentAnalyzer().run_one(data, agentClass, CLASSIFY_TIME, LEARN_TIME, num_folds=NUM_FOLDS, seed=SEED)
+            gc.enable()
+            gc.collect()
+            
+            idf = s_common.idf(NUM_FOLDS, data, num_features)
+            results.append( (num_features,confusion, idf) )
+            print "num_features:",num_features," => ", 'Accuracy: %.2f%%' % (confusion.getAccuracy()*100), 'idf:', idf
+        except:
+            print "Timeout for", num_features
+
     print_results(results,dataname)
     
 
-def main():
+def main(agentClassGenerator, params):
+    '''
+    @param agentClassGenerator:  fn: int <number of features> --> AgentClass
+    @param params: example:
+    {
+        'X_POINTS' : 3,
+        'STEP' : 5,
+        'NUM_FOLDS' : 10,
+        'CLASSIFY_TIME' : 5,
+        'LEARN_TIME' : 30,
+        'SEED' : 1
+    }
+    '''
     datasets = createRealDatasets()
     for name, dataset in datasets.items():
-        main_measure(dataset,name)
+        main_measure(dataset,name,agentClassGenerator,params)
 
-
-
-main()        
 
