@@ -1,0 +1,230 @@
+Evaluating iPod Nano: Which aspect?
+num_features: 5  =>  Accuracy: 61.85% idf: 4.48187196964
+num_features: 10  =>  Accuracy: 78.78% idf: 3.78872478908
+num_features: 15  =>  Accuracy: 73.59% idf: 3.38325968098
+num_features: 20  =>  Accuracy: 71.56% idf: 3.09557760852
+num_features: 25  =>  Accuracy: 70.20% idf: 2.87243405721
+num_features: 30  =>  Accuracy: 67.04% idf: 2.69011250042
+num_features: 35  =>  Accuracy: 62.75% idf: 2.53596182059
+num_features: 40  =>  Accuracy: 60.50% idf: 2.40243042796
+num_features: 45  =>  Accuracy: 59.14% idf: 2.28464739231
+num_features: 50  =>  Accuracy: 60.27% idf: 2.17928687665
+num_features: 55  =>  Accuracy: 58.47% idf: 2.08397669685
+num_features: 60  =>  Accuracy: 56.88% idf: 1.99696531986
+num_features: 65  =>  Accuracy: 56.43% idf: 1.91692261218
+num_features: 70  =>  Accuracy: 53.50% idf: 1.84281464003
+num_features: 75  =>  Accuracy: 52.82% idf: 1.77382176854
+num_features: 80  =>  Accuracy: 51.92% idf: 1.7092832474
+num_features: 85  =>  Accuracy: 51.92% idf: 1.64865862559
+num_features: 90  =>  Accuracy: 51.24% idf: 1.59150021175
+num_features: 95  =>  Accuracy: 52.60% idf: 1.53743299048
+num_features: 100  =>  Accuracy: 53.27% idf: 1.48613969609
+
+============= Learning Curve ===================
+ --  iPod Nano: Which aspect? --
+num_features, idf accuracy%,
+5 , 4.48187196964 ,61.85
+10 , 3.78872478908 ,78.78
+15 , 3.38325968098 ,73.59
+20 , 3.09557760852 ,71.56
+25 , 2.87243405721 ,70.20
+30 , 2.69011250042 ,67.04
+35 , 2.53596182059 ,62.75
+40 , 2.40243042796 ,60.50
+45 , 2.28464739231 ,59.14
+50 , 2.17928687665 ,60.27
+55 , 2.08397669685 ,58.47
+60 , 1.99696531986 ,56.88
+65 , 1.91692261218 ,56.43
+70 , 1.84281464003 ,53.50
+75 , 1.77382176854 ,52.82
+80 , 1.7092832474 ,51.92
+85 , 1.64865862559 ,51.92
+90 , 1.59150021175 ,51.24
+95 , 1.53743299048 ,52.60
+100 , 1.48613969609 ,53.27
+
+Evaluating Hotels: San Francisco or Chicago?
+num_features: 5  =>  Accuracy: 50.95% idf: 4.43319492125
+num_features: 10  =>  Accuracy: 52.61% idf: 3.74004774069
+num_features: 15  =>  Accuracy: 50.71% idf: 3.33458263258
+num_features: 20  =>  Accuracy: 50.47% idf: 3.04690056013
+num_features: 25  =>  Accuracy: 49.05% idf: 2.82375700881
+num_features: 30  =>  Accuracy: 52.37% idf: 2.64143545202
+num_features: 35  =>  Accuracy: 54.50% idf: 2.48728477219
+num_features: 40  =>  Accuracy: 54.74% idf: 2.35375337957
+num_features: 45  =>  Accuracy: 54.74% idf: 2.23597034391
+num_features: 50  =>  Accuracy: 54.74% idf: 2.13060982825
+num_features: 55  =>  Accuracy: 54.74% idf: 2.03529964845
+num_features: 60  =>  Accuracy: 59.24% idf: 1.94828827146
+num_features: 65  =>  Accuracy: 55.45% idf: 1.86824556379
+num_features: 70  =>  Accuracy: 57.35% idf: 1.79413759163
+num_features: 75  =>  Accuracy: 56.16% idf: 1.72514472015
+num_features: 80  =>  Accuracy: 56.87% idf: 1.66060619901
+num_features: 85  =>  Accuracy: 58.29% idf: 1.59998157719
+num_features: 90  =>  Accuracy: 56.87% idf: 1.54282316335
+num_features: 95  =>  Accuracy: 58.77% idf: 1.48875594208
+num_features: 100  =>  Accuracy: 58.77% idf: 1.43746264769
+
+============= Learning Curve ===================
+ --  Hotels: San Francisco or Chicago? --
+num_features, idf accuracy%,
+5 , 4.43319492125 ,50.95
+10 , 3.74004774069 ,52.61
+15 , 3.33458263258 ,50.71
+20 , 3.04690056013 ,50.47
+25 , 2.82375700881 ,49.05
+30 , 2.64143545202 ,52.37
+35 , 2.48728477219 ,54.50
+40 , 2.35375337957 ,54.74
+45 , 2.23597034391 ,54.74
+50 , 2.13060982825 ,54.74
+55 , 2.03529964845 ,54.74
+60 , 1.94828827146 ,59.24
+65 , 1.86824556379 ,55.45
+70 , 1.79413759163 ,57.35
+75 , 1.72514472015 ,56.16
+80 , 1.66060619901 ,56.87
+85 , 1.59998157719 ,58.29
+90 , 1.54282316335 ,56.87
+95 , 1.48875594208 ,58.77
+100 , 1.43746264769 ,58.77
+
+Evaluating Best Western Hotels: Bath or room?
+num_features: 5  =>  Accuracy: 83.62% idf: 4.2570301445
+num_features: 10  =>  Accuracy: 90.40% idf: 3.56388296394
+num_features: 15  =>  Accuracy: 87.57% idf: 3.15841785583
+num_features: 20  =>  Accuracy: 84.18% idf: 2.87073578338
+num_features: 25  =>  Accuracy: 82.20% idf: 2.64759223207
+num_features: 30  =>  Accuracy: 81.92% idf: 2.46527067527
+num_features: 35  =>  Accuracy: 79.94% idf: 2.31111999544
+num_features: 40  =>  Accuracy: 80.51% idf: 2.17758860282
+num_features: 45  =>  Accuracy: 81.64% idf: 2.05980556716
+num_features: 50  =>  Accuracy: 82.49% idf: 1.95444505151
+num_features: 55  =>  Accuracy: 81.36% idf: 1.8591348717
+num_features: 60  =>  Accuracy: 81.07% idf: 1.77212349471
+num_features: 65  =>  Accuracy: 79.38% idf: 1.69208078704
+num_features: 70  =>  Accuracy: 79.10% idf: 1.61797281488
+num_features: 75  =>  Accuracy: 76.55% idf: 1.5489799434
+num_features: 80  =>  Accuracy: 77.12% idf: 1.48444142226
+num_features: 85  =>  Accuracy: 76.84% idf: 1.42381680044
+num_features: 90  =>  Accuracy: 76.55% idf: 1.3666583866
+num_features: 95  =>  Accuracy: 77.12% idf: 1.31259116533
+num_features: 100  =>  Accuracy: 76.84% idf: 1.26129787095
+
+============= Learning Curve ===================
+ --  Best Western Hotels: Bath or room? --
+num_features, idf accuracy%,
+5 , 4.2570301445 ,83.62
+10 , 3.56388296394 ,90.40
+15 , 3.15841785583 ,87.57
+20 , 2.87073578338 ,84.18
+25 , 2.64759223207 ,82.20
+30 , 2.46527067527 ,81.92
+35 , 2.31111999544 ,79.94
+40 , 2.17758860282 ,80.51
+45 , 2.05980556716 ,81.64
+50 , 1.95444505151 ,82.49
+55 , 1.8591348717 ,81.36
+60 , 1.77212349471 ,81.07
+65 , 1.69208078704 ,79.38
+70 , 1.61797281488 ,79.10
+75 , 1.5489799434 ,76.55
+80 , 1.48444142226 ,77.12
+85 , 1.42381680044 ,76.84
+90 , 1.3666583866 ,76.55
+95 , 1.31259116533 ,77.12
+100 , 1.26129787095 ,76.84
+
+Evaluating Battery life: Which device?
+num_features: 5  =>  Accuracy: 53.05% idf: 4.58700621536
+num_features: 10  =>  Accuracy: 53.25% idf: 3.8938590348
+num_features: 15  =>  Accuracy: 50.61% idf: 3.48839392669
+num_features: 20  =>  Accuracy: 54.07% idf: 3.20071185424
+num_features: 25  =>  Accuracy: 53.66% idf: 2.97756830293
+num_features: 30  =>  Accuracy: 51.22% idf: 2.79524674613
+num_features: 35  =>  Accuracy: 51.42% idf: 2.64109606631
+num_features: 40  =>  Accuracy: 57.32% idf: 2.50756467368
+num_features: 45  =>  Accuracy: 57.32% idf: 2.38978163802
+num_features: 50  =>  Accuracy: 59.15% idf: 2.28442112237
+num_features: 55  =>  Accuracy: 60.98% idf: 2.18911094256
+num_features: 60  =>  Accuracy: 62.80% idf: 2.10209956557
+num_features: 65  =>  Accuracy: 64.02% idf: 2.0220568579
+num_features: 70  =>  Accuracy: 63.41% idf: 1.94794888575
+num_features: 75  =>  Accuracy: 65.45% idf: 1.87895601426
+num_features: 80  =>  Accuracy: 63.62% idf: 1.81441749312
+num_features: 85  =>  Accuracy: 60.57% idf: 1.7537928713
+num_features: 90  =>  Accuracy: 63.21% idf: 1.69663445746
+num_features: 95  =>  Accuracy: 63.21% idf: 1.64256723619
+num_features: 100  =>  Accuracy: 64.43% idf: 1.59127394181
+
+============= Learning Curve ===================
+ --  Battery life: Which device? --
+num_features, idf accuracy%,
+5 , 4.58700621536 ,53.05
+10 , 3.8938590348 ,53.25
+15 , 3.48839392669 ,50.61
+20 , 3.20071185424 ,54.07
+25 , 2.97756830293 ,53.66
+30 , 2.79524674613 ,51.22
+35 , 2.64109606631 ,51.42
+40 , 2.50756467368 ,57.32
+45 , 2.38978163802 ,57.32
+50 , 2.28442112237 ,59.15
+55 , 2.18911094256 ,60.98
+60 , 2.10209956557 ,62.80
+65 , 2.0220568579 ,64.02
+70 , 1.94794888575 ,63.41
+75 , 1.87895601426 ,65.45
+80 , 1.81441749312 ,63.62
+85 , 1.7537928713 ,60.57
+90 , 1.69663445746 ,63.21
+95 , 1.64256723619 ,63.21
+100 , 1.59127394181 ,64.43
+
+Evaluating Windows 7: Features or speed?
+num_features: 5  =>  Accuracy: 95.70% idf: 3.61091791264
+num_features: 10  =>  Accuracy: 94.09% idf: 2.91777073208
+num_features: 15  =>  Accuracy: 90.86% idf: 2.51230562398
+num_features: 20  =>  Accuracy: 81.18% idf: 2.22462355152
+num_features: 25  =>  Accuracy: 80.11% idf: 2.00148000021
+num_features: 30  =>  Accuracy: 80.65% idf: 1.81915844342
+num_features: 35  =>  Accuracy: 79.03% idf: 1.66500776359
+num_features: 40  =>  Accuracy: 77.96% idf: 1.53147637096
+num_features: 45  =>  Accuracy: 74.73% idf: 1.41369333531
+num_features: 50  =>  Accuracy: 73.12% idf: 1.30833281965
+num_features: 55  =>  Accuracy: 75.81% idf: 1.21302263985
+num_features: 60  =>  Accuracy: 75.27% idf: 1.12601126286
+num_features: 65  =>  Accuracy: 74.19% idf: 1.04596855518
+num_features: 70  =>  Accuracy: 70.97% idf: 0.971860583029
+num_features: 75  =>  Accuracy: 68.82% idf: 0.902867711542
+num_features: 80  =>  Accuracy: 70.43% idf: 0.838329190404
+num_features: 85  =>  Accuracy: 69.89% idf: 0.777704568588
+num_features: 90  =>  Accuracy: 69.35% idf: 0.720546154748
+num_features: 95  =>  Accuracy: 68.82% idf: 0.666478933478
+num_features: 100  =>  Accuracy: 72.58% idf: 0.61518563909
+
+============= Learning Curve ===================
+ --  Windows 7: Features or speed? --
+num_features, idf accuracy%,
+5 , 3.61091791264 ,95.70
+10 , 2.91777073208 ,94.09
+15 , 2.51230562398 ,90.86
+20 , 2.22462355152 ,81.18
+25 , 2.00148000021 ,80.11
+30 , 1.81915844342 ,80.65
+35 , 1.66500776359 ,79.03
+40 , 1.53147637096 ,77.96
+45 , 1.41369333531 ,74.73
+50 , 1.30833281965 ,73.12
+55 , 1.21302263985 ,75.81
+60 , 1.12601126286 ,75.27
+65 , 1.04596855518 ,74.19
+70 , 0.971860583029 ,70.97
+75 , 0.902867711542 ,68.82
+80 , 0.838329190404 ,70.43
+85 , 0.777704568588 ,69.89
+90 , 0.720546154748 ,69.35
+95 , 0.666478933478 ,68.82
+100 , 0.61518563909 ,72.58
+
