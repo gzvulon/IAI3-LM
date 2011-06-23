@@ -30,7 +30,7 @@ def main():
         scp.STEP :     5,
         scp.NUM_FOLDS : 0,
         scp.CLASSIFY_TIME : 2,
-        scp.LEARN_TIME : 60*10,
+        scp.LEARN_TIME : 60*2,
         scp.SEED : 1
     }
     

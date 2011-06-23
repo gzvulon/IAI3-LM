@@ -5,10 +5,10 @@ Created on Jun 23, 2011
 @author: inesmeya
 """
 from dataset_builder import DatasetBuilder
-from s_agent_comparor import AgentComparator
 import scp
 import s_common
 import gc
+from s_learning_analyzer import AgentAnalyzer
 
 def createRealDatasets(dir = 'topics/'):
     '''
@@ -49,7 +49,7 @@ def main_measure(data, dataname,agentClassGenerator,params):
         
         try:
             gc.disable()
-            confusion = AgentComparator().run_one(data, agentClass, CLASSIFY_TIME, LEARN_TIME, num_folds=NUM_FOLDS, seed=SEED)
+            confusion = AgentAnalyzer().run_one(data, agentClass, CLASSIFY_TIME, LEARN_TIME, num_folds=NUM_FOLDS, seed=SEED)
             gc.enable()
             gc.collect()
             
