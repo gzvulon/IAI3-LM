@@ -1,20 +1,23 @@
 from feature_extractor import FeatureExtractor
 import re
 from numpy.ma.core import log
-from topics import s_text_filter
+import s_text_filter
 
-class BagOfWords(FeatureExtractor):
+class BagOfWordsFiltered(FeatureExtractor):
     '''
     Extracts a bag of words representation with TFIDF scores from raw text.
     '''
     
-    def __init__(self, num_features):
+    def __init__(self, num_features, filter_func_list):
         '''
         Constructor.
         
         @param num_features: The number of features to extract.
+        @param param: filter_func_list [terms filter function,..]
         '''
         self.num_features = num_features
+        self.filter_func_list =filter_func_list
+        self.word_pattern = re.compile(r'[a-z]{3,}')
     
     def extract(self, raw_instance):
         '''
@@ -102,7 +105,10 @@ class BagOfWords(FeatureExtractor):
         @param text: A string.
         @return: A list of terms.
         '''
-        pattern = re.compile(r'[a-z]{3,}')
-        terms = re.findall(pattern, text.lower())
-        return s_text_filter.suffixStem(terms)
+        
+        terms = re.findall(self.word_pattern, text.lower())
+        for f in self.filter_func_list:
+            terms = f(terms)
+        
+        return s_text_filter.suffix_stem(terms)
     

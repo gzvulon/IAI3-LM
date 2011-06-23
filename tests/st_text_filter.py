@@ -39,9 +39,33 @@ class Test(unittest.TestCase):
     def test_suffix_stem_complex_example4(self):
         terms = ['inging']
         self.assertEqual(s_text_filter.suffix_stem(terms), ['ing'])
+
+    def test_suffix_stem_normal_words(self):
+        pass
         
-     def test_suffix_stem_normal_words(self):
-              
+    def test_word_list_filter1(self):
+        print '== test_word_list_filter1 =='
+        terms = ["dsfkj", 'sdw', 'a', "dff", 'on']
+        res = s_text_filter.word_list_filter(terms)
+        print res
+        assert res== ["dsfkj", 'sdw',  "dff"]
+    
+        black_list = ["a", "an", "and", "are", "as", "at", "be", "but", "by", 
+                  "for", "if", "in", "into", "is", "it", "no", "not", "of", 
+                  "on", "or", "such", "that", "the", "their", "then", "there", 
+                  "these", "they", "this", "to", "was", "will", "with"]
+        res = s_text_filter.word_list_filter(black_list)
+        print "empty:" , res
+        assert res == []
+    
+    def test_filtering(self):
+        filter_func_list = [s_text_filter.word_list_filter, s_text_filter.suffix_stem]
+        terms = ['and', 'anded', 'gess', 'dsfdf']
+        for f in filter_func_list:
+            terms = f(terms)
+        print "test_filtering"
+        print terms
+            
 
 
 
