@@ -7,7 +7,7 @@ class AgentComparator:
     Compares two learning agents by cross-validation and 
     McNemar's test for statistical significance.
     '''
-    def run_one(self, data, agent1_class, classification_time_limit, learning_time_limit, num_folds = 0, seed = 1):
+    def run_one(self, data, agent1_class, classification_time_limit, learning_time_limit, num_folds = 2, seed = 1):
         '''
         Compares two learning agents by cross-validation of the 
         given dataset and McNemar's test for statistical significance.
