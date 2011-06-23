@@ -298,6 +298,18 @@ class McNemarMatrix:
         
         return s
     
+    
+    def getFirstSign(self):
+        '''
+        @return: positive % if first is better, negative % if first is worse
+        '''
+        if self.matrix[False][True] < self.matrix[True][False]:
+            return (self.getSignificance()*100)
+        elif self.matrix[False][True] > self.matrix[True][False]:
+            return (self.getSignificance()*100)
+        else:
+            return 0.0
+        
     def __repr__(self):
         '''
         @return: An informative string representation of the comparison.
