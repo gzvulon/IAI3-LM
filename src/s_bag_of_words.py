@@ -1,7 +1,7 @@
 from feature_extractor import FeatureExtractor
 import re
 from numpy.ma.core import log
-from topics import s_text_filter
+import s_text_filter
 
 class BagOfWords(FeatureExtractor):
     '''
@@ -104,5 +104,5 @@ class BagOfWords(FeatureExtractor):
         '''
         pattern = re.compile(r'[a-z]{3,}')
         terms = re.findall(pattern, text.lower())
-        return s_text_filter.suffixStem(terms)
+        return s_text_filter.suffix_stem(terms)
     
