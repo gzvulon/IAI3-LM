@@ -55,7 +55,13 @@ class Test(unittest.TestCase):
         print "empty:" , res
         assert res == []
     
-        
+    def test_filtering(self):
+        filter_func_list = [s_text_filter.word_list_filter, s_text_filter.suffix_stem]
+        terms = ['and', 'anded', 'gess', 'dsfdf']
+        for f in filter_func_list:
+            terms = f(terms)
+        print "test_filtering"
+        print terms
             
 
 
