@@ -20,5 +20,6 @@ def suffix_stem(terms):
             if re.match(reg, term):
                 fixed_terms.append(term[:-cut]+new_suffix)
                 break
-    
+        fixed_terms.append(term)
+        
     return fixed_terms

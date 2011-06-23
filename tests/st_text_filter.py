@@ -40,7 +40,8 @@ class Test(unittest.TestCase):
         terms = ['inging']
         self.assertEqual(s_text_filter.suffix_stem(terms), ['ing'])
         
-            
+     def test_suffix_stem_normal_words(self):
+              
 
 
 
