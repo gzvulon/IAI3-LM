@@ -5,7 +5,7 @@ from random import Random
 class AgentComparator:
     '''
     Compares two learning agents by cross-validation and 
-    McNemar's test for statistical significance.
+    McNemar's test for st    atistical significance.
     '''
     
     def run(self, data, agent1_class, agent2_class, classification_time_limit, learning_time_limit, num_folds = 0, seed = 1):
