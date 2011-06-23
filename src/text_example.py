@@ -48,7 +48,7 @@ def runExperiment(name, data, agent1_class, agent2_class, classification_time_li
     '''
     Runs the comparator with the given parameters and prints its output.
     '''
-    confusion1, confusion2, mcnemar = AgentComparator().run(data, agent1_class, agent2_class, classification_time_limit, learning_time_limit, 10)
+    confusion1, confusion2, mcnemar = AgentComparator().run(data, agent1_class, agent2_class, classification_time_limit, learning_time_limit, len(data))
     print name
     print '======================================================='
     print confusion1
