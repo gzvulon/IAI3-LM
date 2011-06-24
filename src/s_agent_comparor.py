@@ -200,7 +200,7 @@ class ConfusionMatrix:
         return correct / self.getSum()
     
     def getAccuracyStr(self):
-        return ',%.2f' % (self.getAccuracy()*100)
+        return '%.2f' % (self.getAccuracy()*100)
     
     def __str__(self):
         '''
@@ -294,7 +294,7 @@ class McNemarMatrix:
             return 0.0
         
     def getFirstSignStr(self):
-        return ',%.2f' % (self.getFirstSign()*100)
+        return '%.2f' % (self.getFirstSign())
                
     
     def __str__(self):

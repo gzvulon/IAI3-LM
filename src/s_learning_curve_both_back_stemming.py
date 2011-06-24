@@ -11,14 +11,14 @@ from nearest_neighbor import NearestNeighbor
 import s_learning_curve
 from s_bag_of_words import BagOfWordsFiltered
 import s_text_filter
-import s_i_filters
+from s_text_filter import suffix_stem
 
 
 def MakeAgentClass(n):
     class AgentLimited(LearningAgent):
         def createFeatureExtractor(self):
-            return BagOfWordsFiltered(n, [s_text_filter.word_list_filter, s_i_filters.suffix_stem])
-        
+            return BagOfWordsFiltered(n, [s_text_filter.word_list_filter, suffix_stem])
+         
         def createClassifier(self):
             return NearestNeighbor()
         
