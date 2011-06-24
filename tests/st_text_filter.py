@@ -5,7 +5,6 @@ Created on Jun 23, 2011
 '''
 import unittest
 import s_text_filter
-from test_steam import the_text
 
 class Test(unittest.TestCase):
 

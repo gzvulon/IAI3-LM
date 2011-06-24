@@ -159,6 +159,9 @@ class ConfusionMatrix:
             correct += self.matrix[classification][classification]
         return correct / self.getSum()
     
+    def getAccuracyStr(self):
+        return '%.2f' % (self.getAccuracy()*100)
+    
     def __str__(self):
         '''
         @return: An informative string representation of the matrix.

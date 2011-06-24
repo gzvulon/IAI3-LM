@@ -5,7 +5,6 @@ Created on Jun 23, 2011
 @author: inesmeya
 '''
 
-import scp
 from learning_agent import LearningAgent
 from nearest_neighbor import NearestNeighbor
 import s_learning_curve
@@ -27,9 +26,8 @@ def MakeAgentClass(n):
 
 def main():
     
-    params = scp.default_params
     agentClassGenerator = MakeAgentClass
-    s_learning_curve.main(agentClassGenerator, params)
+    s_learning_curve.main(agentClassGenerator)
 
 if __name__ == '__main__':
     main()

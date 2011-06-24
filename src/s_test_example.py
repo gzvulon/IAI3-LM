@@ -1,8 +1,5 @@
-from bag_of_words import BagOfWords
 from dataset_builder import DatasetBuilder
 from agent_comparator import AgentComparator
-from learning_agent import LearningAgent
-from nearest_neighbor import NearestNeighbor
 import s_learning_curve_sttemming
 import s_learning_curve_simple
 

@@ -1,8 +1,10 @@
-#Fri Jun 24 14:36:46 IDT 2011
+#Fri Jun 24 18:45:30 IDT 2011
 eclipse.preferences.version=1
 encoding//src/s_bench_vs_all_ench.py=utf-8
 encoding//src/s_bench_vs_all_simple.py=utf-8
+encoding//src/s_bench_vs_our.py=utf-8
 encoding//src/s_bench_vs_test.py=utf-8
 encoding//src/s_common.py=utf-8
 encoding//src/s_learning_curve.py=utf-8
 encoding//src/scp.py=utf-8
+encoding//tests/st_texts_test_fil.py=utf-8

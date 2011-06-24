@@ -1,9 +1,6 @@
 import scp
 from s_agent_comparor import AgentComparator
-import s_learning_curve_simple
-import s_learning_curve_black_list
-import s_learning_curve_sttemming
-import s_learning_curve_both_back_stemming
+
 
 # -*- coding:utf-8 -*-
 """
@@ -12,10 +9,7 @@ Created on Jun 23, 2011
 @author: inesmeya
 """
 from dataset_builder import DatasetBuilder
-import scp
-import s_common
 import gc
-from s_learning_analyzer import AgentAnalyzer
 
 def createRealDatasets(dir = 'topics/'):
     '''
@@ -75,17 +69,18 @@ def print_mres(mres):
         for e in res: print e
         
 
-def main(agentClassPairs):
-    params = {
-        scp.X_POINTS : 20, #not relevat
-        scp.STEP :     5, #not relevat
-        scp.NUM_FOLDS : 0,
-        scp.CLASSIFY_TIME : 2,
-        scp.LEARN_TIME : 60*2,
-        scp.SEED : 1
-    }
-    
-    N = 10
+def main(agentClassPairs,inparams=None, N=10):
+    if inparams == None:
+        params = {
+            scp.X_POINTS : 20, #not relevat
+            scp.STEP :     5, #not relevat
+            scp.NUM_FOLDS : 0,
+            scp.CLASSIFY_TIME : 2,
+            scp.LEARN_TIME : 60*2,
+            scp.SEED : 1
+        }
+    else:
+        params = inparams
     
     datasets = createRealDatasets()
     print " ~~~~~~~~~~ Paired Tests ~~~~~~~~~~~"

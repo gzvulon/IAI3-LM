@@ -10,7 +10,6 @@ import s_learning_curve_black_list
 import s_learning_curve_sttemming
 import s_learning_curve_both_back_stemming
 import s_bech_vs
-import scp
 
 N=10
 
@@ -23,24 +22,4 @@ agentClassPairs = [
     (bothClass, blackClass)
     ]
 
-params = {
-    scp.X_POINTS : 20, #not relevat
-    scp.STEP :     5, #not relevat
-    scp.NUM_FOLDS : 10,
-    scp.CLASSIFY_TIME : 2,
-    scp.LEARN_TIME : 60*2,
-    scp.SEED : 1
-}
-        
-s_bech_vs.main(agentClassPairs,params)
-
-params = {
-    scp.X_POINTS : 20, #not relevat
-    scp.STEP :     5, #not relevat
-    scp.NUM_FOLDS : 0,
-    scp.CLASSIFY_TIME : 2,
-    scp.LEARN_TIME : 60*2,
-    scp.SEED : 1
-}
-
-s_bech_vs.main(agentClassPairs,params)
+s_bech_vs.main(agentClassPairs)

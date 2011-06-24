@@ -5,7 +5,6 @@ Created on Jun 23, 2011
 @author: inesmeya
 '''
 
-import scp
 from learning_agent import LearningAgent
 from nearest_neighbor import NearestNeighbor
 import s_learning_curve
@@ -17,8 +16,7 @@ def MakeAgentClass(n):
     class AgentLimited(LearningAgent):
         def createFeatureExtractor(self):
             return BagOfWordsFiltered(n, [s_text_filter.word_list_filter, 
-                                          s_text_filter.suffix_stem, 
-                                          s_text_filter.common_verbs_filter])
+                                          s_text_filter.suffix_stem])
          
         def createClassifier(self):
             return NearestNeighbor()
@@ -28,18 +26,9 @@ def MakeAgentClass(n):
     return AgentLimited
 
 def main():
-    
-    params = {
-        scp.X_POINTS : 20,
-        scp.STEP :     1,
-        scp.NUM_FOLDS : 0,
-        scp.CLASSIFY_TIME : 2,
-        scp.LEARN_TIME : 60*2,
-        scp.SEED : 1
-    }
-        
+
     agentClassGenerator = MakeAgentClass
-    s_learning_curve.main(agentClassGenerator, params)
+    s_learning_curve.main(agentClassGenerator)
 
 if __name__ == '__main__':
     main()

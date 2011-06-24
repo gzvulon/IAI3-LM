@@ -24,15 +24,6 @@ def createRealDatasets(dir = 'topics/'):
     return datasets
 
 
-def print_results(results,dataname):
-    print "\n============= Learning Curve ==================="
-    print " -- ", dataname, 
-    print " -- "
-    print "num_features,", "idf,", "accuracy%,"
-    for num_features,confusion, idf in results:
-        print num_features, ',%.2f' % idf, ',%.2f' % (confusion.getAccuracy()*100)
-    print
-
 def main_measure(data, dataname,agentClassGenerator,params):
     
     X_POINTS        = params[scp.X_POINTS]
@@ -43,7 +34,10 @@ def main_measure(data, dataname,agentClassGenerator,params):
     SEED            = params[scp.SEED]
     
     num_features_arr =  [ i*STEP for i in range(1,X_POINTS +1) ]
+    print "\n============= Learning Curve ==================="
     print "Evaluating", dataname
+    print "num_features,", "accuracy%,"
+     
     results=[]
     for num_features in num_features_arr:
         agentClass = agentClassGenerator(num_features)
@@ -56,14 +50,13 @@ def main_measure(data, dataname,agentClassGenerator,params):
             
             idf = s_common.idf(NUM_FOLDS, data, num_features)
             results.append( (num_features,confusion, idf) )
-            print "num_features:",num_features," => ", 'Accuracy: %.2f%%' % (confusion.getAccuracy()*100), 'idf:', idf
-        except:
-            print "Timeout for", num_features
+            print num_features, ',', confusion.getAccuracyStr()
+        
+        except Exception, e:
+            print "Error:",e
+            print " Possible Timeout for", num_features
 
-    print_results(results,dataname)
-    
-
-def main(agentClassGenerator, params):
+def main_old(agentClassGenerator, params):
     '''
     @param agentClassGenerator:  fn: int <number of features> --> AgentClass
     @param params: example:
@@ -79,5 +72,12 @@ def main(agentClassGenerator, params):
     datasets = createRealDatasets()
     for name, dataset in datasets.items():
         main_measure(dataset,name,agentClassGenerator,params)
+
+def main(agentClassGenerator):
+    main_old(agentClassGenerator, scp.params_to_100)
+    print
+    print "#####################################"
+    print
+    main_old(agentClassGenerator, scp.params_to_20)
 
 
