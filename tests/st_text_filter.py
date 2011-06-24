@@ -6,13 +6,14 @@ Created on Jun 23, 2011
 import unittest
 from distutils import text_file
 import s_text_filter
+import re
 
 
 class Test(unittest.TestCase):
 
-
+    
     def setUp(self):
-        pass
+        self.word_pattern = re.compile(r'[a-z]{3,}')
 
 
     def tearDown(self):
@@ -40,8 +41,10 @@ class Test(unittest.TestCase):
         terms = ['inging']
         self.assertEqual(s_text_filter.suffix_stem(terms), ['ing'])
 
-    def test_suffix_stem_normal_words(self):
-        pass
+    def test_suffix_stem_dont_lose_words(self):
+        terms = re.findall(self.word_pattern, text.lower())
+        for f in self.filter_func_list:
+            terms = f(terms)
         
     def test_word_list_filter1(self):
         print '== test_word_list_filter1 =='

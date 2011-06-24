@@ -224,7 +224,7 @@ she was quickly able to download music and videos xmas am
 Great little audio video device
 '''
 
-def main():
+def main1():
     terms = word_filter(the_text)
     print "======== Terms ==========="
     for t in terms: print t
@@ -234,7 +234,11 @@ def main():
     print "======== Filteres ==========="
     for t in terms: print t    
     
-    
+def main():
+    terms = word_filter(the_text)
+    terms1 = suffix_stem(terms)
+    print len(terms), len(terms1)
+    assert len(terms) == len(terms1)
 
 if __name__ == '__main__':
     main()
