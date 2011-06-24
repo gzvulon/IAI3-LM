@@ -1,4 +1,5 @@
 import re
+import s_common_verbs
 
 gRules = [
  ('sses', 'ss'),
@@ -54,4 +55,13 @@ def word_list_filter(terms):
                   "on", "or", "such", "that", "the", "their", "then", "there", 
                   "these", "they", "this", "to", "was", "will", "with"]
     res = filter(lambda term: not term in black_list, terms)
+    return res
+
+def common_verbs_filter(terms):
+    '''
+    Removes all the terms that are in the list of 330 common English verbs.
+    Note: We assume suffix_stem was applied to all the verbs are in their normal form.
+    '''
+    common_verbs = s_common_verbs.common_verbs
+    res = filter(lambda term: not term in common_verbs, terms)
     return res
