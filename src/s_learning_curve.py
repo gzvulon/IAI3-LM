@@ -26,10 +26,11 @@ def createRealDatasets(dir = 'topics/'):
 
 def print_results(results,dataname):
     print "\n============= Learning Curve ==================="
-    print " -- ", dataname, "--"
-    print "num_features,", "idf", "accuracy%,"
+    print " -- ", dataname, 
+    print " -- "
+    print "num_features,", "idf,", "accuracy%,"
     for num_features,confusion, idf in results:
-        print num_features,",",idf, ',%.2f' % (confusion.getAccuracy()*100)
+        print num_features, ',%.2f' % idf, ',%.2f' % (confusion.getAccuracy()*100)
     print
 
 def main_measure(data, dataname,agentClassGenerator,params):
