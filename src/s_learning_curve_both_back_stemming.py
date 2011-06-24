@@ -28,7 +28,15 @@ def MakeAgentClass(n):
 
 def main():
     
-    params = scp.default_params
+    params = {
+        scp.X_POINTS : 20,
+        scp.STEP :     1,
+        scp.NUM_FOLDS : 0,
+        scp.CLASSIFY_TIME : 2,
+        scp.LEARN_TIME : 60*2,
+        scp.SEED : 1
+    }
+        
     agentClassGenerator = MakeAgentClass
     s_learning_curve.main(agentClassGenerator, params)
 
