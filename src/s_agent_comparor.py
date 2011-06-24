@@ -199,6 +199,9 @@ class ConfusionMatrix:
             correct += self.matrix[classification][classification]
         return correct / self.getSum()
     
+    def getAccuracyStr(self):
+        return ',%.2f' % (self.getAccuracy()*100)
+    
     def __str__(self):
         '''
         @return: An informative string representation of the matrix.
@@ -278,6 +281,21 @@ class McNemarMatrix:
             return (1.0-p)
         else:
             return 0.0
+        
+    def getFirstSign(self):
+        '''
+        @return: positive % if first is better, negative % if first is worse
+        '''
+        if self.matrix[False][True] < self.matrix[True][False]:
+            return (self.getSignificance()*100)
+        elif self.matrix[False][True] > self.matrix[True][False]:
+            return (self.getSignificance()*100)
+        else:
+            return 0.0
+        
+    def getFirstSignStr(self):
+        return ',%.2f' % (self.getFirstSign()*100)
+               
     
     def __str__(self):
         '''
@@ -299,16 +317,7 @@ class McNemarMatrix:
         return s
     
     
-    def getFirstSign(self):
-        '''
-        @return: positive % if first is better, negative % if first is worse
-        '''
-        if self.matrix[False][True] < self.matrix[True][False]:
-            return (self.getSignificance()*100)
-        elif self.matrix[False][True] > self.matrix[True][False]:
-            return (self.getSignificance()*100)
-        else:
-            return 0.0
+
         
     def __repr__(self):
         '''
