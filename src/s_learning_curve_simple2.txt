@@ -1,0 +1,151 @@
+Evaluating iPod Nano: Which aspect?
+num_features: 1  =>  Accuracy: 32.73% idf: 6.09130988208
+num_features: 2  =>  Accuracy: 28.44% idf: 5.39816270152
+num_features: 3  =>  Accuracy: 47.63% idf: 4.99269759341
+num_features: 4  =>  Accuracy: 62.53% idf: 4.70501552096
+num_features: 5  =>  Accuracy: 61.85% idf: 4.48187196964
+num_features: 6  =>  Accuracy: 64.11% idf: 4.29955041285
+num_features: 7  =>  Accuracy: 72.46% idf: 4.14539973302
+num_features: 8  =>  Accuracy: 80.36% idf: 4.0118683404
+num_features: 9  =>  Accuracy: 79.91% idf: 3.89408530474
+num_features: 10  =>  Accuracy: 78.78% idf: 3.78872478908
+num_features: 11  =>  Accuracy: 78.33% idf: 3.69341460928
+num_features: 12  =>  Accuracy: 78.10% idf: 3.60640323229
+num_features: 13  =>  Accuracy: 76.52% idf: 3.52636052462
+num_features: 14  =>  Accuracy: 74.94% idf: 3.45225255246
+num_features: 15  =>  Accuracy: 73.59% idf: 3.38325968098
+num_features: 16  =>  Accuracy: 72.23% idf: 3.31872115984
+num_features: 17  =>  Accuracy: 72.69% idf: 3.25809653802
+num_features: 18  =>  Accuracy: 71.33% idf: 3.20093812418
+num_features: 19  =>  Accuracy: 71.56% idf: 3.14687090291
+num_features: 20  =>  Accuracy: 71.56% idf: 3.09557760852
+
+============= Learning Curve ===================
+ --  iPod Nano: Which aspect?  -- 
+num_features, idf, accuracy%,
+1 ,6.09 ,32.73
+2 ,5.40 ,28.44
+3 ,4.99 ,47.63
+4 ,4.71 ,62.53
+5 ,4.48 ,61.85
+6 ,4.30 ,64.11
+7 ,4.15 ,72.46
+8 ,4.01 ,80.36
+9 ,3.89 ,79.91
+10 ,3.79 ,78.78
+11 ,3.69 ,78.33
+12 ,3.61 ,78.10
+13 ,3.53 ,76.52
+14 ,3.45 ,74.94
+15 ,3.38 ,73.59
+16 ,3.32 ,72.23
+17 ,3.26 ,72.69
+18 ,3.20 ,71.33
+19 ,3.15 ,71.56
+20 ,3.10 ,71.56
+
+Evaluating Hotels: San Francisco or Chicago?
+num_features: 1  =>  Accuracy: 62.80% idf: 6.04263283368
+num_features: 2  =>  Accuracy: 46.21% idf: 5.34948565312
+num_features: 3  =>  Accuracy: 54.03% idf: 4.94402054501
+num_features: 4  =>  Accuracy: 53.32% idf: 4.65633847256
+num_features: 5  =>  Accuracy: 50.95% idf: 4.43319492125
+num_features: 6  =>  Accuracy: 50.95% idf: 4.25087336445
+num_features: 7  =>  Accuracy: 49.29% idf: 4.09672268463
+num_features: 8  =>  Accuracy: 48.58% idf: 3.963191292
+num_features: 9  =>  Accuracy: 47.39% idf: 3.84540825635
+num_features: 10  =>  Accuracy: 52.61% idf: 3.74004774069
+num_features: 11  =>  Accuracy: 55.21% idf: 3.64473756088
+num_features: 12  =>  Accuracy: 52.61% idf: 3.55772618389
+num_features: 13  =>  Accuracy: 52.61% idf: 3.47768347622
+num_features: 14  =>  Accuracy: 52.37% idf: 3.40357550407
+num_features: 15  =>  Accuracy: 50.71% idf: 3.33458263258
+num_features: 16  =>  Accuracy: 49.76% idf: 3.27004411144
+num_features: 17  =>  Accuracy: 52.13% idf: 3.20941948963
+num_features: 18  =>  Accuracy: 51.18% idf: 3.15226107579
+num_features: 19  =>  Accuracy: 50.95% idf: 3.09819385452
+num_features: 20  =>  Accuracy: 50.47% idf: 3.04690056013
+
+============= Learning Curve ===================
+ --  Hotels: San Francisco or Chicago?  -- 
+num_features, idf, accuracy%,
+1 ,6.04 ,62.80
+2 ,5.35 ,46.21
+3 ,4.94 ,54.03
+4 ,4.66 ,53.32
+5 ,4.43 ,50.95
+6 ,4.25 ,50.95
+7 ,4.10 ,49.29
+8 ,3.96 ,48.58
+9 ,3.85 ,47.39
+10 ,3.74 ,52.61
+11 ,3.64 ,55.21
+12 ,3.56 ,52.61
+13 ,3.48 ,52.61
+14 ,3.40 ,52.37
+15 ,3.33 ,50.71
+16 ,3.27 ,49.76
+17 ,3.21 ,52.13
+18 ,3.15 ,51.18
+19 ,3.10 ,50.95
+20 ,3.05 ,50.47
+
+Evaluating Best Western Hotels: Bath or room?
+num_features: 1  =>  Accuracy: 70.62% idf: 5.86646805693
+num_features: 2  =>  Accuracy: 92.09% idf: 5.17332087637
+num_features: 3  =>  Accuracy: 90.11% idf: 4.76785576827
+num_features: 4  =>  Accuracy: 88.70% idf: 4.48017369581
+num_features: 5  =>  Accuracy: 83.62% idf: 4.2570301445
+num_features: 6  =>  Accuracy: 81.36% idf: 4.07470858771
+num_features: 7  =>  Accuracy: 81.07% idf: 3.92055790788
+num_features: 8  =>  Accuracy: 83.33% idf: 3.78702651525
+num_features: 9  =>  Accuracy: 89.55% idf: 3.6692434796
+num_features: 10  =>  Accuracy: 90.40% idf: 3.56388296394
+num_features: 11  =>  Accuracy: 90.11% idf: 3.46857278413
+num_features: 12  =>  Accuracy: 89.55% idf: 3.38156140715
+num_features: 13  =>  Accuracy: 88.70% idf: 3.30151869947
+num_features: 14  =>  Accuracy: 87.29% idf: 3.22741072732
+num_features: 15  =>  Accuracy: 87.57% idf: 3.15841785583
+num_features: 16  =>  Accuracy: 87.29% idf: 3.09387933469
+num_features: 17  =>  Accuracy: 87.29% idf: 3.03325471288
+num_features: 18  =>  Accuracy: 87.29% idf: 2.97609629904
+num_features: 19  =>  Accuracy: 85.03% idf: 2.92202907777
+num_features: 20  =>  Accuracy: 84.18% idf: 2.87073578338
+
+============= Learning Curve ===================
+ --  Best Western Hotels: Bath or room?  -- 
+num_features, idf, accuracy%,
+1 ,5.87 ,70.62
+2 ,5.17 ,92.09
+3 ,4.77 ,90.11
+4 ,4.48 ,88.70
+5 ,4.26 ,83.62
+6 ,4.07 ,81.36
+7 ,3.92 ,81.07
+8 ,3.79 ,83.33
+9 ,3.67 ,89.55
+10 ,3.56 ,90.40
+11 ,3.47 ,90.11
+12 ,3.38 ,89.55
+13 ,3.30 ,88.70
+14 ,3.23 ,87.29
+15 ,3.16 ,87.57
+16 ,3.09 ,87.29
+17 ,3.03 ,87.29
+18 ,2.98 ,87.29
+19 ,2.92 ,85.03
+20 ,2.87 ,84.18
+
+Evaluating Battery life: Which device?
+num_features: 1  =>  Accuracy: 67.48% idf: 6.19644412779
+num_features: 2  =>  Accuracy: 56.71% idf: 5.50329694723
+num_features: 3  =>  Accuracy: 54.07% idf: 5.09783183913
+num_features: 4  =>  Accuracy: 52.44% idf: 4.81014976667
+num_features: 5  =>  Accuracy: 53.05% idf: 4.58700621536
+num_features: 6  =>  Accuracy: 55.69% idf: 4.40468465857
+num_features: 7  =>  Accuracy: 54.88% idf: 4.25053397874
+num_features: 8  =>  Accuracy: 52.85% idf: 4.11700258611
+num_features: 9  =>  Accuracy: 51.83% idf: 3.99921955046
+num_features: 10  =>  Accuracy: 53.25% idf: 3.8938590348
+num_features: 11  =>  Accuracy: 53.46% idf: 3.798548855
+num_features: 12  =>  Accuracy: 52.64% idf: 3.71153747801
