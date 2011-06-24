@@ -45,6 +45,9 @@ def main_measure(datasets, (agent1_class, agent2_class),params):
     print "------------------------------"
     print "dataset, %s significance, %s accuracy, %s  accuracy" % (a1_name,a1_name,a2_name)
 
+
+    results_mes = []
+    
     for data_name, dataset in datasets.items():
         try:
             gc.disable()
@@ -56,11 +59,23 @@ def main_measure(datasets, (agent1_class, agent2_class),params):
             for r in res: print r,',',
             print
             
+            res = (data_name, mcnemar, confusion1, confusion2 )
+            results_mes.append(res)
+            
         except:
             print "Timeout for", data_name
+        
+        return results_mes
 
 
-def main():
+
+def print_mres(mres):
+    for res in mres:
+        print "############################"
+        for e in res: print e
+        
+
+def main(agentClassPairs):
     params = {
         scp.X_POINTS : 20, #not relevat
         scp.STEP :     5, #not relevat
@@ -72,28 +87,26 @@ def main():
     
     N = 10
     
-    simpleClass = s_learning_curve_simple.MakeAgentLimitedClass(N)
-    blackClass  = s_learning_curve_black_list.MakeAgentClass(N)
-    steemClass =  s_learning_curve_sttemming.MakeAgentClass(N)
-    bothClass = s_learning_curve_both_back_stemming.MakeAgentClass(N)
-    
-    agentClassPairs = [ 
-        (steemClass, simpleClass),
-        (blackClass, simpleClass),
-        (bothClass, simpleClass),
-        
-        (steemClass, blackClass),
-        (bothClass, steemClass),
-        (bothClass, blackClass),
-        ]
-
     datasets = createRealDatasets()
     print " ~~~~~~~~~~ Paired Tests ~~~~~~~~~~~"
     print " vector size=", N
     print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     print
+    
+    results = []
+    
     for pair in agentClassPairs:
-        main_measure(datasets, pair, params)
+        res = main_measure(datasets, pair, params)
+        results.append(res)
+        break
+        
+    print "\n=================== Detatils:"
+    
+    for r in results:
+        print_mres(r)
+        
+    
+    
 
 
 
