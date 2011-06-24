@@ -30,7 +30,7 @@ def main():
     
     params = {
         scp.X_POINTS : 20,
-        scp.STEP :     1,
+        scp.STEP :     5,
         scp.NUM_FOLDS : 0,
         scp.CLASSIFY_TIME : 2,
         scp.LEARN_TIME : 60*2,
