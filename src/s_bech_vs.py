@@ -65,7 +65,7 @@ def main_measure(datasets, (agent1_class, agent2_class),params):
         except:
             print "Timeout for", data_name
         
-        return results_mes
+    return results_mes
 
 
 
@@ -98,7 +98,6 @@ def main(agentClassPairs):
     for pair in agentClassPairs:
         res = main_measure(datasets, pair, params)
         results.append(res)
-        break
         
     print "\n=================== Detatils:"
     
