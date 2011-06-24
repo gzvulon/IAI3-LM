@@ -6,6 +6,8 @@ Created on Jun 23, 2011
 import unittest
 from distutils import text_file
 import s_text_filter
+from test_steam import the_text
+from s_i_filters import word_filter
 
 
 class Test(unittest.TestCase):
@@ -39,7 +41,12 @@ class Test(unittest.TestCase):
     def test_suffix_stem_complex_example4(self):
         terms = ['inging']
         self.assertEqual(s_text_filter.suffix_stem(terms), ['ing'])
-        
+    
+    def test_size(self):
+        terms = word_filter(the_text)
+        terms1 = s_text_filter.suffix_stem(terms)
+        self.assertEqual(len(terms), len(terms1))
+            
     def test_word_list_filter1(self):
         print '== test_word_list_filter1 =='
         terms = ["dsfkj", 'sdw', 'a', "dff", 'on']
