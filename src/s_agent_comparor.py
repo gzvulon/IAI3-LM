@@ -289,7 +289,7 @@ class McNemarMatrix:
         if self.matrix[False][True] < self.matrix[True][False]:
             return (self.getSignificance()*100)
         elif self.matrix[False][True] > self.matrix[True][False]:
-            return (self.getSignificance()*100)
+            return -(self.getSignificance()*100)
         else:
             return 0.0
         

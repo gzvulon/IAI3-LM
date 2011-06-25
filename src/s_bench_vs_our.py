@@ -22,7 +22,7 @@ bothClass = s_learning_curve_both_back_stemming.MakeAgentClass(N)
 ourClass   = s_learning_curve_common_verbs.MakeAgentClass(N)
 
 agentClassPairs = [ 
-    (ourClass,bothClass)
+    (ourClass,bothClass),
     (ourClass,simpleClass)
     ]
 
