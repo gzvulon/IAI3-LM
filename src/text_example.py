@@ -3,6 +3,7 @@ from dataset_builder import DatasetBuilder
 from agent_comparator import AgentComparator
 from learning_agent import LearningAgent
 from nearest_neighbor import NearestNeighbor
+import agent
 
 
 def createTestDataset():
@@ -59,15 +60,16 @@ def runExperiment(name, data, agent1_class, agent2_class, classification_time_li
     print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
     print 
 
-class Agent1(LearningAgent):
-    def createFeatureExtractor(self):
-        return BagOfWords(10)
-    
-    def createClassifier(self):
-        return NearestNeighbor()
-    
-    def __str__(self):
-        return 'TenWords'
+#class Agent1(LearningAgent):
+#    def createFeatureExtractor(self):
+#        return BagOfWords(10)
+#    
+#    def createClassifier(self):
+#        return NearestNeighbor()
+#    
+#    def __str__(self):
+#        return 'TenWords'
+Agent1 =Agent1 = agent.AgentCommonVerbs  
 
 class Agent2(LearningAgent):
     def createFeatureExtractor(self):

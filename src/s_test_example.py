@@ -2,6 +2,7 @@ from dataset_builder import DatasetBuilder
 from agent_comparator import AgentComparator
 import s_learning_curve_sttemming
 import s_learning_curve_simple
+import agent
 
 
 def createTestDataset():
@@ -58,7 +59,7 @@ def runExperiment(name, data, agent1_class, agent2_class, classification_time_li
     print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
     print 
 
-Agent1 = s_learning_curve_sttemming.MakeAgentClass(10)
+Agent1 = agent.AgentCommonVerbs   #s_learning_curve_sttemming.MakeAgentClass(10)
 Agent2 = s_learning_curve_simple.MakeAgentLimitedClass(10)
 
 
